@@ -21,17 +21,17 @@ export default function Navbar () {
         <div className={darkMode.darkMode ? [styles.navbar, styles.dark].join(' ') : styles.navbar}>
             <ul>
                 <li>
-                    <a>
+                    <a href='https://github.com/akist529' target='_blank'>
                         <FaGithub size={64} color={iconColor} />
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href='https://linkedin.com/in/alexkist' target='_blank'>
                         <FaLinkedin size={64} color={iconColor} />
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href='https://www.alexkist.com/resume.pdf' target='_blank'>
                         <IoIosPaper size={64} color={iconColor} />
                     </a>
                 </li>
