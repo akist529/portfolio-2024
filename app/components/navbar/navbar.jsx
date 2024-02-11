@@ -49,16 +49,16 @@ export default function Navbar () {
             <nav>
                 <ul>
                     <li>
-                        <a>About</a>
+                        <a href='#about'>About</a>
                     </li>
                     <li>
-                        <a>Portfolio</a>
+                        <a href='#portfolio'>Portfolio</a>
                     </li>
                     <li>
-                        <a>Skills</a>
+                        <a href='#skills'>Skills</a>
                     </li>
                     <li>
-                        <a>Contact</a>
+                        <a href='#contact'>Contact</a>
                     </li>
                 </ul>
             </nav>
