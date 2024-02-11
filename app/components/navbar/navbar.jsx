@@ -2,7 +2,7 @@ import styles from './navbar.module.scss';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosPaper } from 'react-icons/io';
 import { MdModeNight, MdLightMode } from 'react-icons/md';
-import { useContext, useCallback } from 'react';
+import { useContext, useCallback, useMemo } from 'react';
 import { DarkContext } from '@/app/page';
 
 export default function Navbar () {
@@ -12,33 +12,38 @@ export default function Navbar () {
         darkMode.setDarkMode(prevState => !prevState);
     }, [darkMode]);
 
+    const iconColor = useMemo(() => {
+        if (darkMode.darkMode) return 'white';
+            else return 'black';
+    }, [darkMode]);
+
     return (
-        <div className={styles.navbar}>
+        <div className={darkMode.darkMode ? [styles.navbar, styles.dark].join(' ') : styles.navbar}>
             <ul>
                 <li>
                     <a>
-                        <FaGithub size={64} />
+                        <FaGithub size={64} color={iconColor} />
                     </a>
                 </li>
                 <li>
                     <a>
-                        <FaLinkedin size={64} />
+                        <FaLinkedin size={64} color={iconColor} />
                     </a>
                 </li>
                 <li>
                     <a>
-                        <IoIosPaper size={64} />
+                        <IoIosPaper size={64} color={iconColor} />
                     </a>
                 </li>
             </ul>
-            { darkMode.darkMode && 
-            <button onClick={toggleDarkMode}>
-                <MdModeNight size={64} />
-            </button> 
-            }
             { !darkMode.darkMode && 
             <button onClick={toggleDarkMode}>
-                <MdLightMode size={64} />
+                <MdModeNight size={64} color={iconColor} />
+            </button> 
+            }
+            { darkMode.darkMode && 
+            <button onClick={toggleDarkMode}>
+                <MdLightMode size={64} color={iconColor} />
             </button> 
             }
             <nav>

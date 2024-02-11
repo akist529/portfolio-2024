@@ -4,6 +4,12 @@
     align-items: center;
     width: 100%;
     padding: 10px 30px;
+    background-color: white;
+    color: black;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
 
     ul {
         display: flex;
@@ -14,8 +20,6 @@
 
             a {
                 cursor: pointer;
-                font-size: 32px;
-                text-transform: uppercase;
             }
         }
     }
@@ -25,4 +29,9 @@
         border: none;
         cursor: pointer;
     }
+}
+
+.dark {
+    background-color: black;
+    color: white;
 }
