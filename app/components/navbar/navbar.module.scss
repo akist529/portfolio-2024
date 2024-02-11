@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px;
+
+    ul {
+        display: flex;
+        gap: 30px;
+
+        li {
+            list-style-type: none;
+
+            a {
+                cursor: pointer;
+                font-size: 32px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
