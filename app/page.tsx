@@ -28,8 +28,8 @@ export default function Home() {
         <main className={darkMode ? [styles.main, styles.dark].join(' ') : styles.main}>
           <Navbar />
           <Landing />
-          <Transition />
           <About />
+          <Transition />
         </main>
       </WindowContext.Provider>
     </DarkContext.Provider>
