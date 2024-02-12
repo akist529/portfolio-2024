@@ -4,17 +4,13 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-
-    img {
-        filter: invert(1);
-    }
+    padding: 10px 0;
 
     .text {
         display: flex;
         flex-direction: column;
         text-align: center;
         gap: 10px;
-        white-space: nowrap;
 
         h1 {
             font-size: 3em;
@@ -23,6 +19,12 @@
         h2 {
             font-size: 1.5em;
         }
+    }
+}
+
+.dark {
+    img {
+        filter: invert(1);
     }
 }
 
@@ -51,10 +53,10 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        max-width: 960px;
+        max-width: 1080px;
 
         .text {
-            text-align: right;
+            text-align: left;
 
             h1 {
                 font-size: 4em;
