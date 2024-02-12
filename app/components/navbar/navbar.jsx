@@ -1,16 +1,14 @@
 import styles from './navbar.module.scss';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosPaper } from 'react-icons/io';
-import { MdModeNight, MdLightMode } from 'react-icons/md';
-import { useContext, useCallback, useMemo } from 'react';
-import { DarkContext } from '@/app/page';
+import { MdMenu } from 'react-icons/md';
+import { useContext, useMemo } from 'react';
+import { DarkContext, WindowContext } from '@/app/page';
+import ModeButton from '../mode-button/ModeButton';
 
 export default function Navbar () {
     const darkMode = useContext(DarkContext);
-
-    const toggleDarkMode = useCallback(() => {
-        darkMode.setDarkMode(prevState => !prevState);
-    }, [darkMode]);
+    const window = useContext(WindowContext);
 
     const iconColor = useMemo(() => {
         if (darkMode.darkMode) return 'white';
@@ -19,49 +17,52 @@ export default function Navbar () {
 
     return (
         <div className={darkMode.darkMode ? [styles.navbar, styles.dark].join(' ') : styles.navbar}>
-            <ul>
-                <li>
-                    <a href='https://github.com/akist529' target='_blank'>
-                        <FaGithub size={64} color={iconColor} />
-                    </a>
-                </li>
-                <li>
-                    <a href='https://linkedin.com/in/alexkist' target='_blank'>
-                        <FaLinkedin size={64} color={iconColor} />
-                    </a>
-                </li>
-                <li>
-                    <a href='https://www.alexkist.com/resume.pdf' target='_blank'>
-                        <IoIosPaper size={64} color={iconColor} />
-                    </a>
-                </li>
-            </ul>
-            { !darkMode.darkMode && 
-            <button onClick={toggleDarkMode}>
-                <MdModeNight size={64} color={iconColor} />
-            </button> 
+            <h1>Alex Kist</h1>
+            { window.width >= 768 && 
+                <>
+                    <ul>
+                        <li>
+                            <a href='https://github.com/akist529' target='_blank'>
+                                <FaGithub size={48} color={iconColor} />
+                            </a>
+                        </li>
+                        <li>
+                            <a href='https://linkedin.com/in/alexkist' target='_blank'>
+                                <FaLinkedin size={48} color={iconColor} />
+                            </a>
+                        </li>
+                        <li>
+                            <a href='https://www.alexkist.com/resume.pdf' target='_blank'>
+                                <IoIosPaper size={48} color={iconColor} />
+                            </a>
+                        </li>
+                    </ul>
+                    <ModeButton />
+                </>
             }
-            { darkMode.darkMode && 
-            <button onClick={toggleDarkMode}>
-                <MdLightMode size={64} color={iconColor} />
-            </button> 
+            { window.width >= 1160 && 
+                <nav>
+                    <ul>
+                        <li>
+                            <a href='#about'>About</a>
+                        </li>
+                        <li>
+                            <a href='#portfolio'>Portfolio</a>
+                        </li>
+                        <li>
+                            <a href='#skills'>Skills</a>
+                        </li>
+                        <li>
+                            <a href='#contact'>Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             }
-            <nav>
-                <ul>
-                    <li>
-                        <a href='#about'>About</a>
-                    </li>
-                    <li>
-                        <a href='#portfolio'>Portfolio</a>
-                    </li>
-                    <li>
-                        <a href='#skills'>Skills</a>
-                    </li>
-                    <li>
-                        <a href='#contact'>Contact</a>
-                    </li>
-                </ul>
-            </nav>
+            { window.width < 1160 && 
+                <button>
+                    <MdMenu size={48} color={iconColor} />
+                </button>
+            }
         </div>
     )
 }

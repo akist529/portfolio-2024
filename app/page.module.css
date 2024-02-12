@@ -3,4 +3,24 @@
     grid-template-rows: auto 1fr;
     justify-items: center;
     align-items: center;
+    background-color: white;
+    color: black;
+    padding: 0 10px;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (min-width: 480px) {
+    .main {
+        padding: 0 25px;
+    }
+}
+
+@media only screen and (min-width: 1160px) {
+    .main {
+        padding: 0 50px;
+    }
 }
