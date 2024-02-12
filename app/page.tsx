@@ -1,9 +1,9 @@
 'use client'
-import Image from "next/image";
 import styles from "./page.module.css";
 import Landing from "./components/landing-section/landing";
 import Navbar from "./components/navbar/navbar";
 import { createContext, useState, useEffect, useCallback } from "react";
+import Transition from "./components/transition/transition";
 
 export const DarkContext = createContext({});
 export const WindowContext = createContext({});
@@ -27,6 +27,7 @@ export default function Home() {
         <main className={darkMode ? [styles.main, styles.dark].join(' ') : styles.main}>
           <Navbar />
           <Landing />
+          <Transition />
         </main>
       </WindowContext.Provider>
     </DarkContext.Provider>
