@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/navbar";
 import { createContext, useState, useEffect, useCallback } from "react";
 import Transition from "./components/transition/transition";
 import About from "./components/about-section/about";
+import Portfolio from "./components/portfolio-section/portfolio";
 
 export const DarkContext = createContext({});
 export const WindowContext = createContext({});
@@ -30,6 +31,7 @@ export default function Home() {
           <Landing />
           <About />
           <Transition />
+          <Portfolio />
         </main>
       </WindowContext.Provider>
     </DarkContext.Provider>
