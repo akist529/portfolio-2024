@@ -1,0 +1,94 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        
+        > h1 {
+            font-size: 3.8em;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 6px solid white;
+        border-radius: 10px;
+        filter: drop-shadow(black 0px 10px 3px);
+        padding: 10px;
+        width: 100%;
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            border: none;
+            width: 100%;
+
+            input, textarea {
+                color: rgb(180,180,180);
+                background: none;
+                border: none;
+                border-bottom: 3px solid rgb(180,180,180);
+                font-size: 16px;
+
+                &:focus, &:active {
+                    outline: none;
+                    color: white;
+                }
+            }
+
+            input {
+                height: 32px;
+            }
+
+            textarea {
+                height: 192px;
+                resize: none;
+            }
+
+            #submit {
+                border: 3px solid white;
+                border-radius: 20px;
+                background-color: rgb(76,99,116);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(122,157,184);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .contact {
+        .header {
+            > h1 {
+                font-size: 5.4em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .contact {
+        .header {
+            gap: 20px;
+            
+            > h1 {
+                font-size: 8em;
+            }
+        }
+    }
+}

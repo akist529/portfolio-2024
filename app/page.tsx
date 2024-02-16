@@ -6,6 +6,7 @@ import { createContext, useState, useEffect, useCallback } from "react";
 import Transition from "./components/transition/transition";
 import About from "./components/about-section/about";
 import Portfolio from "./components/portfolio-section/portfolio";
+import Contact from "./components/contact-section/contact";
 
 export const DarkContext = createContext({});
 export const WindowContext = createContext({});
@@ -32,6 +33,7 @@ export default function Home() {
           <About />
           <Transition />
           <Portfolio />
+          <Contact />
         </main>
       </WindowContext.Provider>
     </DarkContext.Provider>
