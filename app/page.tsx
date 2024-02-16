@@ -7,6 +7,7 @@ import Transition from "./components/transition/transition";
 import About from "./components/about-section/about";
 import Portfolio from "./components/portfolio-section/portfolio";
 import Contact from "./components/contact-section/contact";
+import Footer from "./components/footer/footer";
 
 export const DarkContext = createContext({});
 export const WindowContext = createContext({});
@@ -34,6 +35,7 @@ export default function Home() {
           <Transition />
           <Portfolio />
           <Contact />
+          <Footer />
         </main>
       </WindowContext.Provider>
     </DarkContext.Provider>
