@@ -20,9 +20,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 6px solid white;
+        border: 6px solid black;
         border-radius: 10px;
-        filter: drop-shadow(black 0px 10px 3px);
         padding: 10px;
         width: 100%;
 
@@ -35,15 +34,15 @@
             width: 100%;
 
             input, textarea {
-                color: rgb(180,180,180);
+                color: rgb(75,75,75);
                 background: none;
                 border: none;
-                border-bottom: 3px solid rgb(180,180,180);
+                border-bottom: 3px solid rgb(75,75,75);
                 font-size: 16px;
 
                 &:focus, &:active {
                     outline: none;
-                    color: white;
+                    color: black;
                 }
             }
 
@@ -54,6 +53,36 @@
             textarea {
                 height: 192px;
                 resize: none;
+            }
+
+            #submit {
+                border: 3px solid white;
+                border-radius: 20px;
+                background-color: rgb(76,99,116);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(122,157,184);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.dark {
+    form {
+        border: 6px solid white;
+
+        fieldset {
+            input, textarea {
+                color: rgb(180,180,180);
+                border-bottom: 3px solid rgb(180,180,180);
+
+                &:focus, &:active {
+                    outline: none;
+                    color: white;
+                }
             }
 
             #submit {
