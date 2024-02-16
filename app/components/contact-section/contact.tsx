@@ -2,9 +2,11 @@ import { GiCoffeeCup } from "react-icons/gi";
 import styles from './contact.module.scss';
 import { WindowContext } from "@/app/page";
 import { useContext, useMemo } from "react";
+import { DarkContext } from "@/app/page";
 
 export default function Contact () {
     const window = useContext(WindowContext);
+    const darkMode = useContext(DarkContext);
 
     const iconSize = useMemo(() => {
         if (window.width >= 1120) {
@@ -15,7 +17,7 @@ export default function Contact () {
     }, [window]);
 
     return (
-        <div className={styles.contact}>
+        <div className={darkMode.darkMode ? [styles.contact, styles.dark].join(' ') : styles.contact}>
             <div className={styles.header}>
                 <h1>Let's Chat</h1>
                 { window.width >= 720 && <GiCoffeeCup size={iconSize} /> }
