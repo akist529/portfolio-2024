@@ -54,10 +54,13 @@
             width: 100%;
 
             li {
-                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                &:hover {
+                    border-bottom: 3px solid black;
+                }
             }
         }
     }

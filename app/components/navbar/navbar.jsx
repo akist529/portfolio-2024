@@ -21,6 +21,7 @@ export default function Navbar () {
                 <ul>
                     <li>
                         <a href='#about'>About</a>
+                        <span className={styles.underline}></span>
                     </li>
                     <li>
                         <a href='#portfolio'>Portfolio</a>
