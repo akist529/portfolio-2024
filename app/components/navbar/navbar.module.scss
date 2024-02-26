@@ -68,6 +68,12 @@
 
 .dark {
     border-bottom: 3px solid white;
+
+    nav ul li {
+        &:hover {
+            border-bottom: 3px solid white;
+        }
+    }
 }
 
 @media only screen and (min-width: 580px) {
