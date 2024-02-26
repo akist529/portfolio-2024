@@ -13,7 +13,7 @@ export const DarkContext = createContext({});
 export const WindowContext = createContext({});
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [width, setWidth] = useState(0);
 
   const resizeWindow = useCallback(() => {
@@ -23,6 +23,10 @@ export default function Home() {
   useEffect(() => {
     window.addEventListener('resize', resizeWindow);
     setWidth(window.innerWidth);
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setDarkMode(true);
+    }
   }, []);
 
   return (
