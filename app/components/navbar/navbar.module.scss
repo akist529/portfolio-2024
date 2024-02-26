@@ -10,6 +10,7 @@
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
+    border-bottom: 3px solid black;
 
     ul {
         li {
@@ -60,6 +61,10 @@
             }
         }
     }
+}
+
+.dark {
+    border-bottom: 3px solid white;
 }
 
 @media only screen and (min-width: 580px) {
