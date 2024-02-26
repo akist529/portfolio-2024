@@ -29,7 +29,7 @@ export default function Contact () {
                     <input id='email' type='email' name='email' placeholder='Email...' required /><br />
                     <input id='subject' type='text' name='subject' placeholder='Subject...' required /><br />
                     <textarea placeholder='Please Enter Your Message...' required></textarea><br />
-                    <div class='h-captcha' data-captcha='true'></div>
+                    <div className='h-captcha' data-captcha='true'></div>
                     <input id='submit' type='submit' value='Send' /><br />
                 </fieldset>
             </form>
