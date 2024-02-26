@@ -8,6 +8,7 @@ import About from "./components/about-section/about";
 import Portfolio from "./components/portfolio-section/portfolio";
 import Contact from "./components/contact-section/contact";
 import Footer from "./components/footer/footer";
+import Skills from "./components/skills-section/skills";
 
 export const DarkContext = createContext({});
 export const WindowContext = createContext({});
@@ -34,6 +35,9 @@ export default function Home() {
           <About />
           <Transition />
           <Portfolio />
+          <Transition />
+          <Skills />
+          <Transition />
           <Contact />
           <Footer />
         </main>
