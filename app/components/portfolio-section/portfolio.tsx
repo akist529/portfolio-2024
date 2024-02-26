@@ -31,7 +31,7 @@ export default function Portfolio () {
                     link='https://makedr.ink'
                     github='https://github.com/akist529/cocktail-mixer'
                     preview={darkMode.darkMode ? MDDark : MDLight}
-                    text='Created a cocktail generator for users to search a list of available recipes based in ingredients they have on-hand.'
+                    text='Created a cocktail building application allowing users to search a list of available recipes based on ingredients they have on-hand.'
                     stack={['TypeScript', 'SASS', 'Next.js', 'Redux', 'Golang', 'SQLite', 'Apache']}
                 />
                 <Project
@@ -47,8 +47,8 @@ export default function Portfolio () {
                     link='https://312coders.com'
                     github='https://github.com/312coders/312coders'
                     preview={darkMode.darkMode ? _312Dark : _312Light}
-                    text='Developed a modern UI for a startup coding community in the Chicago area.'
-                    stack={['React', 'Tailwind CSS', 'Python', 'Django']}
+                    text='Developed a responsive UI for a startup coding community in the Chicago area.'
+                    stack={['React', 'Tailwind CSS', 'Python', 'Django', 'Docker', 'Nginx']}
                 />
             </div>
         </div>

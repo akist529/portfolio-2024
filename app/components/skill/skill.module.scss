@@ -1,0 +1,46 @@
+.skill {
+    display: grid;
+        grid-template-rows: 64px 1fr;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    width: 128px;
+    height: 128px;
+
+    .icon {
+        background-color: white;
+        border-radius: 10px;
+        width: 64px;
+        height: 64px;
+
+        display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+}
+
+.dark {
+    background: white;
+    color: black;
+
+    .icon {
+        background-color: black;
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .skill {
+        grid-template-rows: 1fr;
+        grid-template-columns: 64px 1fr;
+        gap: 10px;
+        padding: 10px 20px;
+        width: auto;
+        height: auto;
+    }
+}
