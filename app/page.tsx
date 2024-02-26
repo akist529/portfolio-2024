@@ -4,7 +4,6 @@ import Landing from "./components/landing-section/landing";
 import Navbar from "./components/navbar/navbar";
 import { createContext, useState, useEffect, useCallback } from "react";
 import Transition from "./components/transition/transition";
-import About from "./components/about-section/about";
 import Portfolio from "./components/portfolio-section/portfolio";
 import Contact from "./components/contact-section/contact";
 import Footer from "./components/footer/footer";
@@ -31,15 +30,16 @@ export default function Home() {
       <WindowContext.Provider value={{ width, setWidth }}>
         <main className={darkMode ? [styles.main, styles.dark].join(' ') : styles.main}>
           <Navbar />
-          <Landing />
-          <About />
-          <Transition />
-          <Portfolio />
-          <Transition />
-          <Skills />
-          <Transition />
-          <Contact />
-          <Footer />
+          <div className={styles.content}>
+            <Landing />
+            <Transition />
+            <Portfolio />
+            <Transition />
+            <Skills />
+            <Transition />
+            <Contact />
+            <Footer />
+          </div>
         </main>
       </WindowContext.Provider>
     </DarkContext.Provider>

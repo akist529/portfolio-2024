@@ -9,15 +9,20 @@ export default function Landing () {
 
     return (
         <div className={darkMode.darkMode ? [styles.landing, styles.dark].join(' ') : styles.landing}>
-            <div className={styles.text}>
-                <h1>Hi, I'm Alex</h1>
-                <h2>I'm a Full Stack Developer & Designer.</h2>
+            <div className={styles.intro}>
+                <div className={styles.text}>
+                    <h1>Hi, I'm Alex</h1>
+                    <h2>I'm a Full Stack Developer & Designer.</h2>
+                </div>
+                <Image
+                    alt='Developer by Freepik'
+                    src={DeveloperGraphic}
+                    height={256}
+                />
             </div>
-            <Image
-                alt='Developer by Freepik'
-                src={DeveloperGraphic}
-                height={256}
-            />
+            <p className={styles.about}>
+                I have been coding since 2021 and specialize in the field of web development, both in front-end and back-end. I am experienced in building accessible and visually appealing user interfaces, and always focus on creating responsive designs, delivering an exceptional user experience.
+            </p>
         </div>
     );
 }
