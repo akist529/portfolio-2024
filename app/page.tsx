@@ -31,15 +31,17 @@ export default function Home() {
       <WindowContext.Provider value={{ width, setWidth }}>
         <main className={darkMode ? [styles.main, styles.dark].join(' ') : styles.main}>
           <Navbar />
-          <Landing />
-          <About />
-          <Transition />
-          <Portfolio />
-          <Transition />
-          <Skills />
-          <Transition />
-          <Contact />
-          <Footer />
+          <div className={styles.content}>
+            <Landing />
+            <About />
+            <Transition />
+            <Portfolio />
+            <Transition />
+            <Skills />
+            <Transition />
+            <Contact />
+            <Footer />
+          </div>
         </main>
       </WindowContext.Provider>
     </DarkContext.Provider>

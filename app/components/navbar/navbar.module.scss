@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 20px 0;
+    padding: 10px;
     font-size: 22px;
     text-transform: uppercase;
     font-weight: 700;
@@ -26,5 +26,17 @@
         background: none;
         border: none;
         cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .navbar {
+        padding: 10px 25px;
+    }
+}
+
+@media only screen and (min-width: 1160px) {
+    .navbar {
+        padding: 10px 25px;
     }
 }
