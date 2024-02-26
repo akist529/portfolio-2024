@@ -17,7 +17,7 @@ export default function Contact () {
     }, [window]);
 
     return (
-        <div className={darkMode.darkMode ? [styles.contact, styles.dark].join(' ') : styles.contact}>
+        <div id='contact' className={darkMode.darkMode ? [styles.contact, styles.dark].join(' ') : styles.contact}>
             <div className={styles.header}>
                 <h1>Let's Chat</h1>
                 { window.width >= 720 && <GiCoffeeCup size={iconSize} /> }

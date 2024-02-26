@@ -15,7 +15,7 @@ export default function Portfolio () {
     const darkMode = useContext(DarkContext);
 
     return (
-        <div className={styles.portfolio}>
+        <div id='portfolio' className={styles.portfolio}>
             <h1>Portfolio</h1>
             <div className={styles.projects}>
                 <Project
@@ -40,7 +40,7 @@ export default function Portfolio () {
                     github='https://github.com/akist529/gym-tracker'
                     preview={darkMode.darkMode ? LSDark : LSLight}
                     text='Built a fitness application for weightlifting enthusiasts to track their progress and reach their goals.'
-                    stack={['TypeScript', 'SASS', 'Vue', 'Pinia', 'Vue Query', 'Vuetify', 'Strapi']}
+                    stack={['TypeScript', 'Vue', 'Pinia', 'Vue Query', 'Vuetify', 'Node.js', 'Express', 'MySQL']}
                 />
                 <Project
                     title='312 Coders'

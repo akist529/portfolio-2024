@@ -46,7 +46,7 @@ export default function Navbar () {
                         </a>
                     </li>
                     <li>
-                        <a href='https://www.alexkist.com/resume.pdf' target='_blank'>
+                        <a href='Alex_Kist_Resume.pdf' target='_blank'>
                             <IoIosPaper size={48} color={iconColor} />
                         </a>
                     </li>
