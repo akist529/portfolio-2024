@@ -4,7 +4,6 @@ import Landing from "./components/landing-section/landing";
 import Navbar from "./components/navbar/navbar";
 import { createContext, useState, useEffect, useCallback } from "react";
 import Transition from "./components/transition/transition";
-import About from "./components/about-section/about";
 import Portfolio from "./components/portfolio-section/portfolio";
 import Contact from "./components/contact-section/contact";
 import Footer from "./components/footer/footer";
@@ -33,7 +32,6 @@ export default function Home() {
           <Navbar />
           <div className={styles.content}>
             <Landing />
-            <About />
             <Transition />
             <Portfolio />
             <Transition />

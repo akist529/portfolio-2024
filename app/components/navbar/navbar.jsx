@@ -17,52 +17,42 @@ export default function Navbar () {
 
     return (
         <div className={darkMode.darkMode ? [styles.navbar, styles.dark].join(' ') : styles.navbar}>
-            <h1>Alex Kist</h1>
-            { window.width >= 768 && 
-                <>
-                    <ul>
-                        <li>
-                            <a href='https://github.com/akist529' target='_blank'>
-                                <FaGithub size={48} color={iconColor} />
-                            </a>
-                        </li>
-                        <li>
-                            <a href='https://linkedin.com/in/alexkist' target='_blank'>
-                                <FaLinkedin size={48} color={iconColor} />
-                            </a>
-                        </li>
-                        <li>
-                            <a href='https://www.alexkist.com/resume.pdf' target='_blank'>
-                                <IoIosPaper size={48} color={iconColor} />
-                            </a>
-                        </li>
-                    </ul>
-                    <ModeButton />
-                </>
-            }
-            { window.width >= 1160 && 
-                <nav>
-                    <ul>
-                        <li>
-                            <a href='#about'>About</a>
-                        </li>
-                        <li>
-                            <a href='#portfolio'>Portfolio</a>
-                        </li>
-                        <li>
-                            <a href='#skills'>Skills</a>
-                        </li>
-                        <li>
-                            <a href='#contact'>Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            }
-            { window.width < 1160 && 
-                <button>
-                    <MdMenu size={48} color={iconColor} />
-                </button>
-            }
+            <nav>
+                <ul>
+                    <li>
+                        <a href='#about'>About</a>
+                    </li>
+                    <li>
+                        <a href='#portfolio'>Portfolio</a>
+                    </li>
+                    <li>
+                        <a href='#skills'>Skills</a>
+                    </li>
+                    <li>
+                        <a href='#contact'>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div className={styles.buttons}>
+                <ul>
+                    <li>
+                        <a href='https://github.com/akist529' target='_blank'>
+                            <FaGithub size={48} color={iconColor} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href='https://linkedin.com/in/alexkist' target='_blank'>
+                            <FaLinkedin size={48} color={iconColor} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href='https://www.alexkist.com/resume.pdf' target='_blank'>
+                            <IoIosPaper size={48} color={iconColor} />
+                        </a>
+                    </li>
+                </ul>
+                <ModeButton />
+            </div>
         </div>
     )
 }

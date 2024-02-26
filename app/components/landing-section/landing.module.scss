@@ -3,22 +3,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 10px 0;
-
-    .text {
+    gap: 40px;
+    
+    .intro {
         display: flex;
         flex-direction: column;
-        text-align: center;
-        gap: 10px;
-
-        h1 {
-            font-size: 3em;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 0;
+    
+        .text {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+    
+            h1 {
+                font-size: 3em;
+            }
+    
+            h2 {
+                font-size: 1.5em;
+            }
         }
+    }
 
-        h2 {
-            font-size: 1.5em;
-        }
+    .about {
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 1080px;
     }
 }
 
@@ -30,9 +44,11 @@
 
 @media only screen and (min-width: 420px) {
     .landing {
-        .text {
-            h1 {
-                font-size: 4em;
+        .intro {
+            .text {
+                h1 {
+                    font-size: 4em;
+                }
             }
         }
     }
@@ -40,9 +56,11 @@
 
 @media only screen and (min-width: 580px) {
     .landing {
-        .text {
-            h1 {
-                font-size: 5em;
+        .intro {
+            .text {
+                h1 {
+                    font-size: 5em;
+                }
             }
         }
     }
@@ -50,20 +68,22 @@
 
 @media only screen and (min-width: 860px) {
     .landing {
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 1080px;
-
-        .text {
-            text-align: left;
-
-            h1 {
-                font-size: 4em;
-            }
-
-            h2 {
-                font-size: 2.5em;
+        .intro {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1080px;
+    
+            .text {
+                text-align: left;
+    
+                h1 {
+                    font-size: 4em;
+                }
+    
+                h2 {
+                    font-size: 2.5em;
+                }
             }
         }
     }
