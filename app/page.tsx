@@ -8,12 +8,13 @@ import Portfolio from "./components/portfolio-section/portfolio";
 import Contact from "./components/contact-section/contact";
 import Footer from "./components/footer/footer";
 import Skills from "./components/skills-section/skills";
+import Head from 'next/head';
 
 export const DarkContext = createContext({});
 export const WindowContext = createContext({});
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [width, setWidth] = useState(0);
 
   const resizeWindow = useCallback(() => {
@@ -23,12 +24,19 @@ export default function Home() {
   useEffect(() => {
     window.addEventListener('resize', resizeWindow);
     setWidth(window.innerWidth);
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setDarkMode(true);
+    }
   }, []);
 
   return (
     <DarkContext.Provider value={{ darkMode, setDarkMode }}>
       <WindowContext.Provider value={{ width, setWidth }}>
         <main className={darkMode ? [styles.main, styles.dark].join(' ') : styles.main}>
+          <Head>
+            <link rel='icon' sizes='16x16' type='image/ico' href='/favicon.ico' />
+          </Head>
           <Navbar />
           <div className={styles.content}>
             <Landing />

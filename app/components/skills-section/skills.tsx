@@ -29,7 +29,7 @@ import Github from '@/public/github.webp';
 
 export default function Skills () {
     return (
-        <div className={styles.skills}>
+        <div id='skills' className={styles.skills}>
             <h1>Skills</h1>
             <div className={styles.group}>
                 <h2>Front End</h2>

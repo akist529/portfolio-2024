@@ -21,6 +21,7 @@ export default function Navbar () {
                 <ul>
                     <li>
                         <a href='#about'>About</a>
+                        <span className={styles.underline}></span>
                     </li>
                     <li>
                         <a href='#portfolio'>Portfolio</a>
@@ -46,7 +47,7 @@ export default function Navbar () {
                         </a>
                     </li>
                     <li>
-                        <a href='https://www.alexkist.com/resume.pdf' target='_blank'>
+                        <a href='Alex_Kist_Resume.pdf' target='_blank'>
                             <IoIosPaper size={48} color={iconColor} />
                         </a>
                     </li>

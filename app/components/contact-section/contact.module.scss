@@ -1,45 +1,47 @@
 .contact {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
 
     .header {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         
-        > h1 {
+        h1 {
             font-size: 3.8em;
         }
     }
 
     form {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         border: 6px solid black;
-        border-radius: 10px;
+            border-radius: 10px;
         padding: 10px;
         width: 100%;
 
         fieldset {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 5px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
             border: none;
             width: 100%;
 
-            input, textarea {
+            .field {
                 color: rgb(75,75,75);
                 background: none;
                 border: none;
-                border-bottom: 3px solid rgb(75,75,75);
+                    border-bottom: 3px solid rgb(75,75,75);
                 font-size: 16px;
+                width: 100%;
 
                 &:focus, &:active {
                     outline: none;
@@ -56,14 +58,19 @@
                 resize: none;
             }
 
-            #submit {
-                border: 3px solid white;
-                border-radius: 20px;
-                background-color: rgb(76,99,116);
+            .submit {
+                border: 3px solid rgb(75,75,75);
+                    border-radius: 20px;
                 cursor: pointer;
+                width: 128px;
+                height: 48px;
+                background: none;
+                color: rgb(75,75,75);
+                font-size: 1.5em;
+                text-transform: uppercase;
 
                 &:hover {
-                    background-color: rgb(122,157,184);
+                    background-color: black;
                     color: white;
                 }
             }
@@ -76,7 +83,7 @@
         border: 6px solid white;
 
         fieldset {
-            input, textarea {
+            .field {
                 color: rgb(180,180,180);
                 border-bottom: 3px solid rgb(180,180,180);
 
@@ -86,15 +93,10 @@
                 }
             }
 
-            #submit {
-                border: 3px solid white;
-                border-radius: 20px;
-                background-color: rgb(76,99,116);
-                cursor: pointer;
-
+            .submit {
                 &:hover {
-                    background-color: rgb(122,157,184);
-                    color: white;
+                    background-color: white;
+                    color: black;
                 }
             }
         }
@@ -102,23 +104,19 @@
 }
 
 @media only screen and (min-width: 480px) {
-    .contact {
-        .header {
-            > h1 {
-                font-size: 5.4em;
-            }
+    .contact .header {
+        h1 {
+            font-size: 5.4em;
         }
     }
 }
 
 @media only screen and (min-width: 1120px) {
-    .contact {
-        .header {
-            gap: 20px;
-            
-            > h1 {
-                font-size: 8em;
-            }
+    .contact .header {
+        gap: 20px;
+        
+        h1 {
+            font-size: 8em;
         }
     }
 }

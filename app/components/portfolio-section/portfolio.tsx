@@ -15,7 +15,7 @@ export default function Portfolio () {
     const darkMode = useContext(DarkContext);
 
     return (
-        <div className={styles.portfolio}>
+        <div id='portfolio' className={styles.portfolio}>
             <h1>Portfolio</h1>
             <div className={styles.projects}>
                 <Project
@@ -23,8 +23,8 @@ export default function Portfolio () {
                     link='https://educationroyalegaming.com'
                     github='https://github.com/akist529/education-royale-gaming'
                     preview={darkMode.darkMode ? ERGDark : ERGLight}
-                    text='Worked closely with a business leader to develop a modern UI for an educational gaming program.'
-                    stack={['TypeScript', 'Next.js', 'Chakra UI']}
+                    text='Worked closely with a business leader to develop a modern website for an educational gaming program.'
+                    stack={['TypeScript', 'React/Next.js', 'Chakra UI']}
                 />
                 <Project
                     title='MakeDrink'
@@ -32,7 +32,7 @@ export default function Portfolio () {
                     github='https://github.com/akist529/cocktail-mixer'
                     preview={darkMode.darkMode ? MDDark : MDLight}
                     text='Created a cocktail building application allowing users to search a list of available recipes based on ingredients they have on-hand.'
-                    stack={['TypeScript', 'SASS', 'Next.js', 'Redux', 'Golang', 'SQLite', 'Apache']}
+                    stack={['TypeScript', 'SASS', 'React/Next.js', 'Redux', 'Golang', 'SQLite', 'Apache']}
                 />
                 <Project
                     title='LiftShark'
@@ -40,7 +40,7 @@ export default function Portfolio () {
                     github='https://github.com/akist529/gym-tracker'
                     preview={darkMode.darkMode ? LSDark : LSLight}
                     text='Built a fitness application for weightlifting enthusiasts to track their progress and reach their goals.'
-                    stack={['TypeScript', 'SASS', 'Vue', 'Pinia', 'Vue Query', 'Vuetify', 'Strapi']}
+                    stack={['TypeScript', 'Vue', 'Pinia', 'Vue Query', 'Vuetify', 'Node.js', 'Express', 'MySQL']}
                 />
                 <Project
                     title='312 Coders'
