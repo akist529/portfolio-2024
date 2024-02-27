@@ -23,8 +23,8 @@ export default function Portfolio () {
                     link='https://educationroyalegaming.com'
                     github='https://github.com/akist529/education-royale-gaming'
                     preview={darkMode.darkMode ? ERGDark : ERGLight}
-                    text='Worked closely with a business leader to develop a modern UI for an educational gaming program.'
-                    stack={['TypeScript', 'Next.js', 'Chakra UI']}
+                    text='Worked closely with a business leader to develop a modern website for an educational gaming program.'
+                    stack={['TypeScript', 'React/Next.js', 'Chakra UI']}
                 />
                 <Project
                     title='MakeDrink'
@@ -32,7 +32,7 @@ export default function Portfolio () {
                     github='https://github.com/akist529/cocktail-mixer'
                     preview={darkMode.darkMode ? MDDark : MDLight}
                     text='Created a cocktail building application allowing users to search a list of available recipes based on ingredients they have on-hand.'
-                    stack={['TypeScript', 'SASS', 'Next.js', 'Redux', 'Golang', 'SQLite', 'Apache']}
+                    stack={['TypeScript', 'SASS', 'React/Next.js', 'Redux', 'Golang', 'SQLite', 'Apache']}
                 />
                 <Project
                     title='LiftShark'
