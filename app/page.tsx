@@ -28,7 +28,7 @@ export default function Home() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setDarkMode(true);
     }
-  }, []);
+  }, [resizeWindow]);
 
   return (
     <DarkContext.Provider value={{ darkMode, setDarkMode }}>
