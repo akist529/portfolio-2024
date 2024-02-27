@@ -8,6 +8,7 @@ import Portfolio from "./components/portfolio-section/portfolio";
 import Contact from "./components/contact-section/contact";
 import Footer from "./components/footer/footer";
 import Skills from "./components/skills-section/skills";
+import Head from 'next/head';
 
 export const DarkContext = createContext({});
 export const WindowContext = createContext({});
@@ -33,6 +34,9 @@ export default function Home() {
     <DarkContext.Provider value={{ darkMode, setDarkMode }}>
       <WindowContext.Provider value={{ width, setWidth }}>
         <main className={darkMode ? [styles.main, styles.dark].join(' ') : styles.main}>
+          <Head>
+            <link rel='icon' sizes='16x16' type='image/ico' href='/favicon.ico' />
+          </Head>
           <Navbar />
           <div className={styles.content}>
             <Landing />
