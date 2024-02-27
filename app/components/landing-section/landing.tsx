@@ -11,8 +11,8 @@ export default function Landing () {
         <div id='about' className={darkMode.darkMode ? [styles.landing, styles.dark].join(' ') : styles.landing}>
             <div className={styles.intro}>
                 <div className={styles.text}>
-                    <h1>Hi, I'm Alex</h1>
-                    <h2>I'm a Full Stack Developer & Designer.</h2>
+                    <h1>Hi, I&apos;m Alex</h1>
+                    <h2>I&apos;m a Full Stack Developer & Designer.</h2>
                 </div>
                 <Image
                     alt='Developer by Freepik'

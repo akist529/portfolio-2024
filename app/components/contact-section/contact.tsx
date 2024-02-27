@@ -19,7 +19,7 @@ export default function Contact () {
     return (
         <div id='contact' className={darkMode.darkMode ? [styles.contact, styles.dark].join(' ') : styles.contact}>
             <div className={styles.header}>
-                <h1>Let's Chat</h1>
+                <h1>Let&apos;s Chat</h1>
                 { window.width >= 720 && <GiCoffeeCup size={iconSize} /> }
             </div>
             <form action='https://api.web3forms.com/submit' method='POST'>
