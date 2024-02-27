@@ -1,10 +1,9 @@
 import styles from './navbar.module.scss';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosPaper } from 'react-icons/io';
-import { MdMenu } from 'react-icons/md';
 import { useContext, useMemo } from 'react';
-import { DarkContext, WindowContext } from '@/app/page';
 import ModeButton from '../mode-button/ModeButton';
+import { DarkContext, WindowContext } from '@/app/context';
 
 export default function Navbar () {
     const darkMode = useContext(DarkContext);

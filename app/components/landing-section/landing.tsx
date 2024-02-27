@@ -1,8 +1,8 @@
 import DeveloperGraphic from '@/public/developer.png';
 import Image from 'next/image';
 import styles from './landing.module.scss';
-import { DarkContext } from '@/app/page';
 import { useContext } from 'react';
+import { DarkContext } from '@/app/context';
 
 export default function Landing () {
     const darkMode = useContext(DarkContext);

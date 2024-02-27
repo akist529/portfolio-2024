@@ -2,8 +2,8 @@ import { IconType } from "react-icons";
 import styles from './skill.module.scss';
 import { StaticImageData } from "next/image";
 import Image from "next/image";
-import { DarkContext, WindowContext } from "@/app/page";
 import { useContext } from "react";
+import { DarkContext, WindowContext } from "@/app/context";
 
 interface Props {
     skill: string,

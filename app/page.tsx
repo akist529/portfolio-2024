@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import Landing from "./components/landing-section/landing";
 import Navbar from "./components/navbar/navbar";
-import { createContext, useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Transition from "./components/transition/transition";
 import Portfolio from "./components/portfolio-section/portfolio";
 import Contact from "./components/contact-section/contact";
@@ -10,9 +10,7 @@ import Footer from "./components/footer/footer";
 import Skills from "./components/skills-section/skills";
 import Head from 'next/head';
 import { NextPage } from "next";
-
-export const DarkContext = createContext({});
-export const WindowContext = createContext({});
+import { DarkContext, WindowContext } from "./context";
 
 const HomePage: NextPage = () => {
   const [darkMode, setDarkMode] = useState(false);

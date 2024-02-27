@@ -1,9 +1,8 @@
 import styles from './project.module.scss';
 import Image, { StaticImageData } from 'next/image';
 import { useContext, useMemo } from 'react';
-import { WindowContext } from '@/app/page';
 import { FaGithub } from 'react-icons/fa';
-import { DarkContext } from '@/app/page';
+import { DarkContext, WindowContext } from '@/app/context';
 
 export default function Project (props: { title: string, link: string, github: string, preview: StaticImageData, text: string, stack: string[] }) {
     const { title, link, github, preview, text, stack } = props;

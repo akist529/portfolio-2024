@@ -1,6 +1,6 @@
 import { MdModeNight, MdLightMode } from 'react-icons/md';
 import { useCallback, useContext, useMemo } from 'react';
-import { DarkContext } from '@/app/page';
+import { DarkContext } from '@/app/context';
 
 export default function ModeButton () {
     const darkMode = useContext(DarkContext);

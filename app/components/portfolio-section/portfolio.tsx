@@ -8,8 +8,8 @@ import MDLight from '@/public/md-light.webp';
 import MDDark from '@/public/md-dark.webp';
 import _312Light from '@/public/312-light.webp';
 import _312Dark from '@/public/312-dark.webp';
-import { DarkContext } from '@/app/page';
 import { useContext } from 'react';
+import { DarkContext } from '@/app/context';
 
 export default function Portfolio () {
     const darkMode = useContext(DarkContext);

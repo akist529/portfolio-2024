@@ -2,7 +2,7 @@ import Next from '@/public/next.svg';
 import Image from 'next/image';
 import styles from './footer.module.scss';
 import { useMemo, useContext } from 'react';
-import { DarkContext } from '@/app/page';
+import { DarkContext } from '@/app/context';
 
 export default function Footer () {
     const year = useMemo(() => {

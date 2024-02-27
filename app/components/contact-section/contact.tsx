@@ -1,8 +1,7 @@
 import { GiCoffeeCup } from "react-icons/gi";
 import styles from './contact.module.scss';
-import { WindowContext } from "@/app/page";
 import { useContext, useMemo } from "react";
-import { DarkContext } from "@/app/page";
+import { WindowContext, DarkContext } from "@/app/context";
 
 export default function Contact () {
     const window = useContext(WindowContext);
