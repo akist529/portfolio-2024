@@ -9,11 +9,12 @@ import Contact from "./components/contact-section/contact";
 import Footer from "./components/footer/footer";
 import Skills from "./components/skills-section/skills";
 import Head from 'next/head';
+import { NextPage } from "next";
 
 export const DarkContext = createContext({});
 export const WindowContext = createContext({});
 
-export default function Home() {
+const HomePage: NextPage = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [width, setWidth] = useState(0);
 
@@ -53,3 +54,5 @@ export default function Home() {
     </DarkContext.Provider>
   );
 }
+
+export default HomePage;
