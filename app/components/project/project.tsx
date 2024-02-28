@@ -10,11 +10,11 @@ export default function Project (props: { title: string, link: string, github: s
     const darkMode = useContext(DarkContext);
 
     const previewWidth = useMemo(() => {
-        if (window.width >= 860) {
+        if (window[0] >= 860) {
             return 512;
-        } else if (window.width >= 580) {
+        } else if (window[0] >= 580) {
             return 512;
-        } else if (window.width >= 420) {
+        } else if (window[0] >= 420) {
             return 384;
         } else {
             return 256;
@@ -22,11 +22,11 @@ export default function Project (props: { title: string, link: string, github: s
     }, [window]);
 
     const previewHeight = useMemo(() => {
-        if (window.width >= 860) {
+        if (window[0] >= 860) {
             return 432;
-        } else if (window.width >= 580) {
+        } else if (window[0] >= 580) {
             return 432;
-        } else if (window.width >= 420) {
+        } else if (window[0] >= 420) {
             return 324;
         } else {
             return 216;
@@ -34,7 +34,7 @@ export default function Project (props: { title: string, link: string, github: s
     }, [window]);
 
     return (
-        <div className={darkMode.darkMode ? [styles.project, styles.dark].join(' ') : styles.project}>
+        <div className={darkMode[0] ? [styles.project, styles.dark].join(' ') : styles.project}>
             <div className={styles.header}>
                 <a href={link} target='_blank'>
                     <h1>{ title }</h1>

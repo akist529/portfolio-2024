@@ -8,7 +8,7 @@ export default function Contact () {
     const darkMode = useContext(DarkContext);
 
     const iconSize = useMemo(() => {
-        if (window.width >= 1120) {
+        if (window[0] >= 1120) {
             return 112;
         } else {
             return 80;
@@ -16,10 +16,10 @@ export default function Contact () {
     }, [window]);
 
     return (
-        <div id='contact' className={darkMode.darkMode ? [styles.contact, styles.dark].join(' ') : styles.contact}>
+        <div id='contact' className={darkMode[0] ? [styles.contact, styles.dark].join(' ') : styles.contact}>
             <div className={styles.header}>
                 <h1>Let&apos;s Chat</h1>
-                { window.width >= 720 && <GiCoffeeCup size={iconSize} /> }
+                { window[0] >= 720 && <GiCoffeeCup size={iconSize} /> }
             </div>
             <form action='https://api.web3forms.com/submit' method='POST'>
                 <fieldset>

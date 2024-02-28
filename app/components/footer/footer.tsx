@@ -12,7 +12,7 @@ export default function Footer () {
     const darkMode = useContext(DarkContext);
 
     return (
-        <footer className={darkMode.darkMode ? [styles.footer, styles.dark].join(' ') : styles.footer}>
+        <footer className={darkMode[0] ? [styles.footer, styles.dark].join(' ') : styles.footer}>
             <span>Built with 
                 <a href='https://nextjs.org/' target='_blank'>
                     <Image alt='Next.js' src={Next} width='64' height='16' />

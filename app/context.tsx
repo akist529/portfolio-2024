@@ -1,11 +1,10 @@
-import { createContext } from "react";
+import { createContext, Dispatch, SetStateAction } from "react";
+import React from 'react';
 
-export const DarkContext = createContext({
-    darkMode: false,
-    setDarkMode: () => {}
-});
+export const DarkContext = createContext<
+    [boolean, Dispatch<SetStateAction<boolean>>]
+>([false, () => {}]);
 
-export const WindowContext = createContext({
-    width: 0,
-    setWidth: () => {}
-});
+export const WindowContext = createContext<
+    [number, Dispatch<SetStateAction<number>>]
+>([0, () => {}]);

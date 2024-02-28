@@ -3,19 +3,18 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosPaper } from 'react-icons/io';
 import { useContext, useMemo } from 'react';
 import ModeButton from '../mode-button/ModeButton';
-import { DarkContext, WindowContext } from '@/app/context';
+import { DarkContext } from '@/app/context';
 
 export default function Navbar () {
     const darkMode = useContext(DarkContext);
-    const window = useContext(WindowContext);
 
     const iconColor = useMemo(() => {
-        if (darkMode.darkMode) return 'white';
+        if (darkMode[0]) return 'white';
             else return 'black';
     }, [darkMode]);
 
     return (
-        <div className={darkMode.darkMode ? [styles.navbar, styles.dark].join(' ') : styles.navbar}>
+        <div className={darkMode[0] ? [styles.navbar, styles.dark].join(' ') : styles.navbar}>
             <nav>
                 <ul>
                     <li>

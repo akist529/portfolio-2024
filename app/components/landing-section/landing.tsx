@@ -8,7 +8,7 @@ export default function Landing () {
     const darkMode = useContext(DarkContext);
 
     return (
-        <div id='about' className={darkMode.darkMode ? [styles.landing, styles.dark].join(' ') : styles.landing}>
+        <div id='about' className={darkMode[0] ? [styles.landing, styles.dark].join(' ') : styles.landing}>
             <div className={styles.intro}>
                 <div className={styles.text}>
                     <h1>Hi, I&apos;m Alex</h1>

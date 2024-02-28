@@ -19,14 +19,14 @@ export default function Skill (props: Props) {
     const darkMode = useContext(DarkContext);
 
     return (
-        <li className={darkMode.darkMode ? [styles.skill, styles.dark].join(' ') : styles.skill}>
+        <li className={darkMode[0] ? [styles.skill, styles.dark].join(' ') : styles.skill}>
             <div className={styles.icon}>
                 <Image
                     alt={skill}
                     src={icon}
                     width={w/3}
                     height={h/3}
-                    style={ (darkMode.darkMode && invertColor) ? {filter: 'invert(1)'} : {} }
+                    style={ (darkMode[0] && invertColor) ? {filter: 'invert(1)'} : {} }
                 />
             </div>
             <span>{ skill }</span>

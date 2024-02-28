@@ -30,8 +30,8 @@ const HomePage: NextPage = () => {
   }, [resizeWindow]);
 
   return (
-    <DarkContext.Provider value={{ darkMode, setDarkMode }}>
-      <WindowContext.Provider value={{ width, setWidth }}>
+    <DarkContext.Provider value={[darkMode, setDarkMode]}>
+      <WindowContext.Provider value={[width, setWidth]}>
         <main className={darkMode ? [styles.main, styles.dark].join(' ') : styles.main}>
           <Head>
             <link rel='icon' sizes='16x16' type='image/ico' href='/favicon.ico' />

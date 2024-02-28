@@ -8,7 +8,7 @@ export default function Transition () {
     const window = useContext(WindowContext);
 
     const isMobile = useMemo(() => {
-        if (window.width >= 1120) {
+        if (window[0] >= 1120) {
             return false;
         } else {
             return true;
