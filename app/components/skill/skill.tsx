@@ -24,8 +24,8 @@ export default function Skill (props: Props) {
                 <Image
                     alt={skill}
                     src={icon}
-                    width={w/3}
-                    height={h/3}
+                    width={w}
+                    height={h}
                     style={ (darkMode[0] && invertColor) ? {filter: 'invert(1)'} : {} }
                 />
             </div>
