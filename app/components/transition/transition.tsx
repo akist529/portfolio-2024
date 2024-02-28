@@ -1,14 +1,14 @@
 import { BiSolidMouse } from "react-icons/bi";
 import { MdArrowDownward, MdOutlineSwipeDown } from "react-icons/md";
 import styles from './transition.module.scss';
-import { WindowContext } from "@/app/page";
 import { useContext, useMemo } from "react";
+import { WindowContext } from "@/app/context";
 
 export default function Transition () {
     const window = useContext(WindowContext);
 
     const isMobile = useMemo(() => {
-        if (window.width >= 1120) {
+        if (window[0] >= 1120) {
             return false;
         } else {
             return true;

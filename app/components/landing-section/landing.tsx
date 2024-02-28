@@ -1,18 +1,18 @@
 import DeveloperGraphic from '@/public/developer.png';
 import Image from 'next/image';
 import styles from './landing.module.scss';
-import { DarkContext } from '@/app/page';
 import { useContext } from 'react';
+import { DarkContext } from '@/app/context';
 
 export default function Landing () {
     const darkMode = useContext(DarkContext);
 
     return (
-        <div id='about' className={darkMode.darkMode ? [styles.landing, styles.dark].join(' ') : styles.landing}>
+        <div id='about' className={darkMode[0] ? [styles.landing, styles.dark].join(' ') : styles.landing}>
             <div className={styles.intro}>
                 <div className={styles.text}>
-                    <h1>Hi, I'm Alex</h1>
-                    <h2>I'm a Full Stack Developer & Designer.</h2>
+                    <h1>Hi, I&apos;m Alex</h1>
+                    <h2>I&apos;m a Full Stack Developer & Designer.</h2>
                 </div>
                 <Image
                     alt='Developer by Freepik'

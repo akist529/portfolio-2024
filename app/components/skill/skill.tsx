@@ -2,8 +2,8 @@ import { IconType } from "react-icons";
 import styles from './skill.module.scss';
 import { StaticImageData } from "next/image";
 import Image from "next/image";
-import { DarkContext, WindowContext } from "@/app/page";
 import { useContext } from "react";
+import { DarkContext, WindowContext } from "@/app/context";
 
 interface Props {
     skill: string,
@@ -19,14 +19,14 @@ export default function Skill (props: Props) {
     const darkMode = useContext(DarkContext);
 
     return (
-        <li className={darkMode.darkMode ? [styles.skill, styles.dark].join(' ') : styles.skill}>
+        <li className={darkMode[0] ? [styles.skill, styles.dark].join(' ') : styles.skill}>
             <div className={styles.icon}>
                 <Image
                     alt={skill}
                     src={icon}
                     width={w/3}
                     height={h/3}
-                    style={ (darkMode.darkMode && invertColor) ? {filter: 'invert(1)'} : {} }
+                    style={ (darkMode[0] && invertColor) ? {filter: 'invert(1)'} : {} }
                 />
             </div>
             <span>{ skill }</span>
